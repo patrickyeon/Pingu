@@ -12,9 +12,6 @@
 #define LOG(...) do {} while (0)
 #endif // DEBUG_LOGGING
 
-// UART startup time in us
-#define STARTUPTIME 2000000
-
 static byte txBuff[PKT_OVERHEAD + MAX_PAYLOAD];
 int serialFlush(void);
 
@@ -37,7 +34,8 @@ static int serialInit(void) {
 
     tcsetattr(serialPort.fd, TCSANOW, &term);
 
-    usleep(STARTUPTIME);
+    // sleep to let the UART start up
+    sleep(2);
     serialFlush();
     return 0;
 }

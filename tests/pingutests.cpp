@@ -1,4 +1,5 @@
-#include <strings.h>
+#include <string.h>
+#include <stdio.h>
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/TestPlugin.h"
 #include "CppUTest/SimpleString.h"
@@ -48,7 +49,7 @@ static byte *getLastCmd(void) {
 
 static int rxFaker(byte *buffer) {
     int len = rxBuff[2] + PKT_OVERHEAD;
-    memcpy(buffer, rxBuff, len);
+    memcpy(buffer, rxBuff, (size_t)len);
     return len;
 }
 

@@ -1,5 +1,5 @@
 #include "pingu.h"
-#include <strings.h>
+#include <string.h>
 #include <stdlib.h>
 
 static le16_t mkLEint(int val) {

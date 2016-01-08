@@ -1,4 +1,5 @@
-#include <strings.h>
+#include <string.h>
+#include <stdio.h>
 #include <unistd.h>
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/TestPlugin.h"

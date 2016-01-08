@@ -1,5 +1,5 @@
-CC=/usr/local/bin/gcc-4.8
-CXX=/usr/local/bin/g++-4.8
+CC=gcc
+CXX=g++
 
 
 COMPONENT_NAME = pingu
